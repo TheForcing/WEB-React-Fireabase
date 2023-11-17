@@ -8,10 +8,10 @@ export default function Navbar (){
         <>
        <nav className={styles.nav}>
        <Link href="/" legacyBehavior>
-       <a className={router.pathname === "/" ? "active" : ""}>home</a>
+       <a className={`${styles.active} ,{router.pathname === "/" ? "active" : ""}`}>home</a>
       </Link>
       <Link href="/create-account" legacyBehavior>
-      <a className={router.pathname === "/create-account" ? "active" : ""}>계정생성</a>
+      <a className={`${styles.active} ,{router.pathname === "/create-account" ? "active" : ""}`}>계정생성</a>
       </Link>
       </nav>
       </>

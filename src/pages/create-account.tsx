@@ -1,6 +1,22 @@
+import { useState } from "react";
 import styles from "/src/styles/Create-account.module.css"
 
+
 export default function CreateAccount () {
+  const [ isLoading, setLoading] = useState(false);
+  const [nickname, setNickname] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+   
+  const onSubmit = (e:React.FormEvent<HTMLFormElement>)=> {
+    e.preventDefault();
+    setError("");
+    if( isLoading || name === "" || password === "" || email === "") return;
+
+      
+  }
   return (
     <>
     <div className={styles.div}>

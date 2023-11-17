@@ -10,12 +10,15 @@
     align-content: center;
     columns: normal; 
     width:50%;
-    height:100px;
+    height:35px;
     text-align: center;
     background-color: white;
     border-radius: 5px;
     border-color: #3ed4be;
     margin: 5px;
+    font-size: 22px;
+    resize: none;
+    
 
 }
 .button {
