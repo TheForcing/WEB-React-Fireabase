@@ -1,0 +1,30 @@
+.div {
+   display:flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 20%;
+
+}
+
+.textarea{
+    align-content: center;
+    columns: normal; 
+    width:50%;
+    height:100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #3ed4be;
+    margin: 5px;
+
+}
+.button {
+    color: #3ed4be;
+    background-color:white;
+    border-radius: 5px;
+    border-color: #3ed4be;
+    width: 10%;
+    height: 10%;
+    margin: 5px;
+ 
+}

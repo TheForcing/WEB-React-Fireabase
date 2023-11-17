@@ -1,16 +1,20 @@
 import Link from "next/link";
+import styles from "/src/styles/Navbar.module.css"
+import { useRouter } from "next/router";
 
 export default function Navbar (){
+    const router = useRouter();
     return (
-        <div>
-    <Link href="/">
-       home
+        <>
+       <nav className={styles.nav}>
+       <Link href="/" legacyBehavior>
+       <a className={router.pathname === "/" ? "active" : ""}>home</a>
       </Link>
-      <Link href="/create-account">
-      계정 생성
+      <Link href="/create-account" legacyBehavior>
+      <a className={router.pathname === "/create-account" ? "active" : ""}>계정생성</a>
       </Link>
-      </div>
-    
+      </nav>
+      </>
     )
 
 }

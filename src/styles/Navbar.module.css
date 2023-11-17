@@ -1,0 +1,12 @@
+.nav{
+    display: flex;
+    font-size: 24px;
+    font-color: white;
+    background-color: purple;
+}
+
+.active {
+   font-color: blue;
+   text-underline: underline;
+   color: yellow;
+}
