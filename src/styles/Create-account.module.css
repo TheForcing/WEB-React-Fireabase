@@ -6,7 +6,7 @@
 
 }
 
-.textarea{
+.input{
     align-content: center;
     columns: normal; 
     width:50%;
@@ -30,4 +30,12 @@
     height: 10%;
     margin: 5px;
  
+}
+
+.form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }

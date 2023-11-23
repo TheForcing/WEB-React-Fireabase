@@ -10,12 +10,26 @@ import { useRouter } from "next/router";
 export default function CreateAccount () {
   const router = useRouter()
   const [ isLoading, setLoading] = useState(false);
-  const [nickname, setNickname] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
    
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      target: { name, value },
+    } = e;
+    if (name === "name") {
+      setName(value);
+    } else if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
+  };
+  
+  
+
   const onSubmit = async (e:React.FormEvent<HTMLFormElement>)=> {
 
     e.preventDefault();
@@ -43,16 +57,43 @@ export default function CreateAccount () {
   
   }
   return (
-    <>
+    <form className={styles.Form} onSubmit={onSubmit}>
     <div className={styles.div}>
-    <textarea className={styles.textarea}>아이디를 입력해주세요</textarea>
-    <textarea className={styles.textarea}>비밀번호를 입력해주세요</textarea>
-    <button className={styles.button} >
-   계정 생성
-    </button>
+      <input
+     className={styles.input}
+       onChange={onChange}
+       name="name"
+       value={name}
+       placeholder="Name"
+       type="name"
+       required
+    / >
+     <input
+     className={styles.input}
+       onChange={onChange}
+       name="email"
+       value={email}
+       placeholder="Email"
+       type="email"
+       required
+    / >
+     <input
+     className={styles.input}
+     onChange={onChange}
+     value={password}
+     name="password"
+     placeholder="Password"
+     type="password"
+     required
+     />
+   <input
+    className={styles.input}
+    type="submit"
+    value={isLoading ? "Loading..." : "Create Account"}
+    />
     </div>
- 
-</>
+    </form>
+
   )
   
 }
