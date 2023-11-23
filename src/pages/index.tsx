@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import Login from "./login";
 
 export default function Page() {
     return (
     <>
-    <h1>Hello, Next.js!</h1>
+    <Login></Login>
     <Navbar></Navbar>
+
     </>
     )
   }
