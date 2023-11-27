@@ -18,10 +18,11 @@ export default function GithubButton () {
     };
     return(
         <div className={styles.div}>
+        <Image src="/github-mark.svg" alt={"깃허브 이미지"} width={40} height={40}/>
         <button className={styles.button} onClick={onClick}>
         Continue with github
         </button>
-        <Image src="/github-mark.svg" alt={"깃허브 이미지"} width={50} height={50}/>
+      
         </div>
     )
 }
