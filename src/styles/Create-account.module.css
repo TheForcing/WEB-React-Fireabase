@@ -21,6 +21,20 @@
     
 
 }
+.login {
+    cursor: pointer;
+    align-content: center;
+    columns: normal; 
+    width:50%;
+    height:35px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #3ed4be;
+    margin: 5px;
+    font-size: 22px;
+    resize: none;
+}
 .button {
     color: #3ed4be;
     background-color:white;
@@ -47,4 +61,6 @@
   align-items: center;
   width: 420px;
   padding: 50px 0px;
+  font-size: 68px;
+  font-weight: bold;
 }

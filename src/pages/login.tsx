@@ -4,6 +4,7 @@ import { useState } from "react";
 import { auth } from "../../firebase";
 import { FirebaseError } from "firebase/app";
 import  styles from "../../src/styles/Create-account.module.css"
+import GithubButton from "@/components/github-btn";
 
 export default function Login () {
    
@@ -44,26 +45,29 @@ export default function Login () {
     <div>
        <title className={styles.title}>Log in</title>
     <form className={styles.form} onSubmit={onSubmit}>
-    <input
-     className={styles.input}
-    onChange={onChange}
-    name="email"
-     value={email}
-    placeholder="Email"
-    type="email"
-    required
+        <input
+        className={styles.input}
+        onChange={onChange}
+        name="email"
+        value={email}
+        placeholder="Email"
+        type="email"
+        required
         />
         <input
         className={styles.input}    
-    onChange={onChange}
-    value={password}
-    name="password"
-    placeholder="Password"
-    type="password"
-    required
+        onChange={onChange}
+        value={password}
+        name="password"
+        placeholder="Password"
+        type="password"
+        required
         />
-        <input className={styles.input} type="submit" value={isLoading ? "Loading..." : "Log in"} />
+        <input className={styles.login} type="submit" value={isLoading ? "Loading..." : "Log in"} />
     </form>
+    { error !== "" ? <h2>{error}</h2>: null}
+   
+    <GithubButton/>
     </div>
    )
 }

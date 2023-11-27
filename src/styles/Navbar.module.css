@@ -1,7 +1,12 @@
 .nav{
-    display: flex;
-    font-size: 24px;
-    font-color: white;
+   flex-direction: row;
+   align-content: center;
+   margin-left: 15vw;
+   display:grid;
+   align-items: auto;
+   grid-template-columns: repeat(5, 1fr);
+   
+
 }
 
 .active {
